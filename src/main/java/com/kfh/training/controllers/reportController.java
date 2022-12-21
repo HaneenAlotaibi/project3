@@ -27,4 +27,13 @@ public class reportController {
 	Iterable<report> getAllreport() {
 		return service.getAllreport();
 	}
+	
+	@GetMapping("/report/date/{date}")
+	public report getreportBydate(@PathVariable String date) {
+		return service.getreportBydate(date);
+	}
+	@GetMapping("/report/category/{category}")
+	public report getreportBycategory(@PathVariable String category) {
+		return service.getreportBycategory(category);
+	}
 		}

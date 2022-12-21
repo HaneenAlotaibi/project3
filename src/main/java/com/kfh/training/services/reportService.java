@@ -18,4 +18,11 @@ public class reportService {
 	public Iterable<report> getAllreport() {
 		return repo.findAll();
 	}
+
+	public report getreportBydate(String date) {
+		return repo.findBydate(date);
+	}
+	public report getreportBycategory(String category) {
+		return repo.findBycategory(category);
+	}
 }
