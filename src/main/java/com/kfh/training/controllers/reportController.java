@@ -10,20 +10,22 @@ import com.kfh.training.services.reportService;
 
 @RestController
 public class reportController {
-	
+
 	@Autowired
 	reportService service;
+
 	@GetMapping("/report")
 	Iterable<report> getAllreport() {
 		return service.getAllreport();
 	}
-	
+
 	@GetMapping("/report/date/{date}")
 	public report getreportBydate(@PathVariable String date) {
 		return service.getreportBydate(date);
 	}
+
 	@GetMapping("/report/category/{category}")
 	public report getreportBycategory(@PathVariable String category) {
 		return service.getreportBycategory(category);
 	}
-		}
+}

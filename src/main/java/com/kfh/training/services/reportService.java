@@ -19,6 +19,7 @@ public class reportService {
 	public report getreportBydate(String date) {
 		return repo.findBydate(date);
 	}
+
 	public report getreportBycategory(String category) {
 		return repo.findBycategory(category);
 	}
